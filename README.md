@@ -10,8 +10,9 @@ Who is "president" of "United States"?
 
 ```js
 data = {};
-data["United States"] = { myName: "United States" };
-data["Joe Biden"] = { myName: "Joe Biden"};
-data["United States"].president = data["Joe Biden"];
-data["United States"].president
+data["United States"] = { myName: "United States", start: new Date() };
+data["Joe Biden"] = { myName: "Joe Biden", start: new Date() };
+data["United States"].president = { name: "Joe Biden", start: new Date() };
+data["United States"].president;
+data[data["United States"].president.name]
 ```
